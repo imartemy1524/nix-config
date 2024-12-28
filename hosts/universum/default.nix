@@ -37,13 +37,15 @@
     pkgs.zed-editor
     pkgs.micro
 
-    pkgs.kotatogram-desktop
+    # pkgs.kotatogram-desktop
 
     pkgs.brewCasks.orbstack
     pkgs.brewCasks.firefox
     pkgs.docker
+    pkgs.kotatogram-desktop
+    pkgs.mpv
 
-    pkgs.nodejs
+    pkgs.nodejs_23
     pkgs.xonsh
 
     pkgs.nixd
@@ -53,6 +55,7 @@
     pkgs.btop
     pkgs.libavif
     pkgs.imagemagick
+    pkgs.speedtest-go
 
     pkgs.zstd
   ];
