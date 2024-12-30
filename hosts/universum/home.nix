@@ -1,7 +1,6 @@
 { config, ... }:
 {
   imports = [
-    ./anime4k.nix
     ./helix.nix
   ];
 
