@@ -50,11 +50,14 @@
     pkgs.nixd
     pkgs.nixfmt-rfc-style
 
+    pkgs.anime4k
+
     pkgs.yandex-cloud
     pkgs.btop
     pkgs.libavif
     pkgs.imagemagick
     pkgs.speedtest-go
+    pkgs.socat
 
     pkgs.zstd
   ];
