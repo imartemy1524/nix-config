@@ -1,6 +1,7 @@
 { config, ... }:
 {
   imports = [
+    ./anime4k.nix
     ./helix.nix
   ];
 
@@ -41,6 +42,10 @@
     lsd = {
       enable = true;
       enableAliases = true;
+    };
+
+    mpv = {
+      enable = true;
     };
 
     home-manager.enable = true;

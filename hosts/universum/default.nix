@@ -43,7 +43,6 @@
     pkgs.brewCasks.firefox
     pkgs.docker
     pkgs.kotatogram-desktop
-    pkgs.mpv
 
     pkgs.nodejs_23
     pkgs.xonsh
