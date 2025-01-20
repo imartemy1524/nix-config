@@ -35,17 +35,17 @@
           ./hosts/universum
           ./modules/home-manager/module.nix
           ./modules/copy-apps/darwin-module.nix
-          ./modules/fish-path-fix/darwin-module.nix
           ./modules/macos-jdk/darwin-module.nix
           { config.nixpkgs.overlays = [ inputs.brew-nix.overlays.default ]; }
         ];
         specialArgs = {
           inherit inputs;
           hm-modules = [
+            ./modules/macos-remap-keys/hm-module.nix
             ./modules/fish/hm-module.nix
+            ./modules/ssh-config/hm-module.nix
           ];
         };
       };
     };
-
 }

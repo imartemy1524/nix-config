@@ -1,12 +1,25 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   imports = [
     ./helix.nix
   ];
 
   xdg.enable = true;
+  services.macos-remap-keys = {
+    enable = true;
+    keyboard = {
+      "Control" = "ForwardDelete";
+      "Capslock" = "Fn";
+      "Option" = "Control";
+      "Command" = "Option";
+      "Eisuu" = "Command";
+      "Kana" = "Spacebar";
+      "Fn" = "RightOption";
+    };
+  };
   programs = {
     fish.enable = true;
+    ssh.enable = true;
     git = {
       enable = true;
       userEmail = "imartemy1524@gmail.com";
@@ -23,12 +36,10 @@
         };
       };
     };
-
     starship = {
       enable = true;
-      enableFishIntegration = true;
+      enableFishIntegration = false;
     };
-
     bat = {
       enable = true;
       config.theme = "TwoDark";
@@ -37,18 +48,25 @@
       enable = true;
       enableFishIntegration = true;
     };
-
     lsd = {
       enable = true;
       enableAliases = true;
     };
-
-    mpv = {
-      enable = true;
-    };
-
+    mpv.enable = true;
+    micro.enable = true;
     home-manager.enable = true;
   };
+
+  home.packages = [
+    pkgs.docker
+    pkgs.btop
+
+    pkgs.xonsh
+    pkgs.nodejs_23
+
+    pkgs.nixd
+    pkgs.nixfmt-rfc-style
+  ];
 
   home = {
     sessionVariables = {

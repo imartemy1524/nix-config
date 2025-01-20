@@ -1,4 +1,9 @@
-{ pkgs, hm-modules, ... }:
+{
+  pkgs,
+  hm-modules,
+  inputs,
+  ...
+}:
 {
   users.users."im" = {
     name = "im";
@@ -35,25 +40,13 @@
     pkgs.jetbrains.pycharm-professional
     pkgs.iterm2
     pkgs.zed-editor
-    pkgs.micro
-
-    # pkgs.kotatogram-desktop
 
     pkgs.brewCasks.orbstack
     pkgs.brewCasks.firefox
-    pkgs.docker
-    pkgs.kotatogram-desktop
 
-    pkgs.nodejs_23
-    pkgs.xonsh
-
-    pkgs.nixd
-    pkgs.nixfmt-rfc-style
-
-    pkgs.anime4k
+    pkgs.brewCasks.telegram-desktop
 
     pkgs.yandex-cloud
-    pkgs.btop
     pkgs.libavif
     pkgs.imagemagick
     pkgs.speedtest-go
@@ -87,6 +80,15 @@
         "staff"
         "root"
       ];
+    };
+    registry = {
+      local.flake = inputs.self;
+      nixpkgs.to = {
+        owner = "NixOS";
+        repo = "nixpkgs";
+        rev = inputs.nixpkgs.rev;
+        type = "github";
+      };
     };
   };
 
