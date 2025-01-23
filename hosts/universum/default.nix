@@ -43,6 +43,7 @@
 
     pkgs.brewCasks.orbstack
     pkgs.brewCasks.firefox
+    pkgs.brewCasks.middleclick
 
     pkgs.brewCasks.telegram-desktop
 
@@ -51,6 +52,8 @@
     pkgs.imagemagick
     pkgs.speedtest-go
     pkgs.socat
+
+    pkgs.aldente
 
     pkgs.zstd
   ];
