@@ -81,6 +81,9 @@
       ANDROID_USER_HOME = "${config.xdg.dataHome}/android";
       GOPATH = "${config.xdg.dataHome}/go";
     };
+    shellAliases = {
+      "lsblk" = "diskutil list";
+    };
   };
 
   programs.fish.userPaths = [
