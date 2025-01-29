@@ -49,9 +49,12 @@
 
     pkgs.yandex-cloud
     pkgs.libavif
+    pkgs.libwebp
     pkgs.imagemagick
     pkgs.speedtest-go
     pkgs.socat
+
+    pkgs.activitywatch
 
     pkgs.aldente
 
