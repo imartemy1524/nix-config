@@ -41,7 +41,7 @@
         specialArgs = {
           inherit inputs;
           hm-modules = [
-            ./modules/macos-remap-keys/hm-module.nix
+            ./modules/macos-remap-keys1/hm-module.nix
             ./modules/fish/hm-module.nix
             ./modules/ssh-config/hm-module.nix
           ];

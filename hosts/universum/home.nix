@@ -5,7 +5,7 @@
   ];
 
   xdg.enable = true;
-  services.macos-remap-keys = {
+  services.macos-remap-keys1 = {
     enable = true;
     keyboard = {
       "Control" = "ForwardDelete";

@@ -5,7 +5,7 @@
   ...
 }:
 let
-  cfg = config.services.macos-remap-keys;
+  cfg = config.services.macos-remap-keys1;
   keytables = import ./keytables.nix { inherit lib; };
 
   keyToHIDCode = table: key: keytables.${table}.${key};
@@ -28,7 +28,7 @@ let
   propertyString = ''{ "UserKeyMapping": [ ${allMappingsString} ] }'';
 in
 {
-  options.services.macos-remap-keys = {
+  options.services.macos-remap-keys1 = {
     enable = lib.mkEnableOption "macOS key remapping service";
 
     keyboard = lib.mkOption {

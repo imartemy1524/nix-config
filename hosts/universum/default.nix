@@ -54,7 +54,7 @@
     pkgs.speedtest-go
     pkgs.socat
 
-    pkgs.activitywatch
+    # pkgs.activitywatch
 
     pkgs.aldente
 
