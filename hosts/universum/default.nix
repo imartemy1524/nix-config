@@ -14,8 +14,9 @@
   home-manager.users."im".imports = hm-modules ++ [ ./home.nix ];
 
   nixpkgs.config.allowUnfree = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
-  services.nix-daemon.enable = true;
+  nix.enable = true;
   programs.fish.enable = true;
   programs.direnv = {
     enable = true;
@@ -31,21 +32,26 @@
   environment.systemPackages = [
     pkgs.spotify
     pkgs.vlc-bin
+    pkgs.vscode
 
     pkgs.zoom-us
     pkgs.qbittorrent
     pkgs.brewCasks.maccy
+    pkgs.brewCasks.obs
 
     pkgs.brewCasks.webstorm
     pkgs.jetbrains.pycharm-professional
+    pkgs.jetbrains.idea-ultimate
+    # pkgs.teams
+
     pkgs.iterm2
     pkgs.zed-editor
 
-    pkgs.brewCasks.orbstack
+    # pkgs.brewCasks.orbstack
     pkgs.brewCasks.firefox
     pkgs.brewCasks.middleclick
 
-    pkgs.brewCasks.telegram-desktop
+    # pkgs.brewCasks.telegram-desktop
 
     pkgs.yandex-cloud
     pkgs.libavif
@@ -54,11 +60,11 @@
     pkgs.speedtest-go
     pkgs.socat
 
-    # pkgs.activitywatch
-
     pkgs.aldente
+    inputs.stellar.packages.${pkgs.system}.default
 
     pkgs.zstd
+
   ];
 
   homebrew = {
@@ -67,6 +73,10 @@
       "discord"
       "google-chrome"
       "warp"
+      "orbstack"
+    ];
+    brews = [
+      "stellar-cli"
     ];
   };
 
@@ -102,7 +112,11 @@
     hostName = "universum";
     computerName = "Ivan's MacBook";
     localHostName = "universum";
+
+    # extraHosts = [
+    #   { ip = "127.0.0.1"; hostnames = [ "test.yummy-anime.ru" ]; }
+    # ];
   };
 
-  system.stateVersion = 4;
+  system.stateVersion = 5;
 }

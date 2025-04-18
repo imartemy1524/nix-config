@@ -9,14 +9,23 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    darwin = {
+      url = "github:lnl7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    stellar = {
+      url = "github:stellar/stellar-cli";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     flakelight-darwin = {
       url = "github:cmacrae/flakelight-darwin";
       inputs.flakelight.follows = "flakelight";
+      inputs.nix-darwin.follows = "darwin";
     };
     brew-nix = {
       url = "github:BatteredBunny/brew-nix";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.nix-darwin.follows = "flakelight-darwin/nix-darwin";
+      inputs.nix-darwin.follows = "darwin";
       inputs.brew-api.follows = "brew-api";
     };
     brew-api = {

@@ -8,7 +8,7 @@
   services.macos-remap-keys1 = {
     enable = true;
     keyboard = {
-      "Control" = "ForwardDelete";
+      "Control" = "Capslock";
       "Capslock" = "Fn";
       "Option" = "Control";
       "Command" = "Option";
@@ -83,11 +83,12 @@
     };
     shellAliases = {
       "lsblk" = "diskutil list";
+      "tree" = "lt";
     };
   };
 
   programs.fish.userPaths = [
-    "${config.home.homeDirectory}/.local/bin"
+    "${config.home.homeDirectory}/.orbstack/bin"
     "${config.home.homeDirectory}/Library/Python/3.9/bin"
     "${config.home.homeDirectory}/.local/share/cargo/bin"
     "/opt/homebrew/bin"

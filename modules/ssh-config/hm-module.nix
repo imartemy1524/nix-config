@@ -9,19 +9,15 @@
           UseKeychain = "yes";
         };
       };
-      "yummy" = {
-        hostname = "yummy";
-        user = "root";
-        identityFile = "~/.ssh/id_rsa";
-      };
-      "tonlotto" = {
-        hostname = "81.200.153.75";
-        user = "root";
-        identityFile = "/proj/NodeJs/TonLotto/ssh.key";
-      };
       "oskartimeweb" = {
         hostname = "45.132.50.203";
         user = "root";
+        identityFile = "~/.ssh/id_rsa";
+      };
+      "yummynew" = {
+        hostname = "94.241.141.207";
+        user = "root";
+        identityFile = "~/.ssh/id_ed25519";
       };
       "im1corp.github.com" = {
         hostname = "github.com";
@@ -38,36 +34,6 @@
         user = "root";
         identityFile = "~/.ssh/id_rsa";
       };
-      "videoservice-api" = {
-        hostname = "80.90.185.22";
-        user = "root";
-        identityFile = "~/.ssh/id_rsa";
-      };
-      "torproxy" = {
-        hostname = "212.22.70.113";
-        user = "ubuntu";
-        identityFile = "~/.ssh/id_rsa";
-      };
-      "hetzner-first" = {
-        hostname = "95.216.24.149";
-        user = "root";
-        identityFile = "~/.ssh/id_rsa";
-      };
-      "videoplayer-api" = {
-        hostname = "109.172.89.27";
-        user = "root";
-        identityFile = "~/.ssh/id_rsa";
-      };
-      "gitlab.yummyani.local" = {
-        hostname = "46.174.53.218";
-        user = "root";
-        identityFile = "~/.ssh/id_yummy";
-      };
-      "tonclicker" = {
-        hostname = "109.172.83.37";
-        user = "root";
-        identityFile = "~/.ssh/id_ed25519";
-      };
       "pepeton" = {
         hostname = "91.198.220.45";
         user = "root";
@@ -83,30 +49,11 @@
         identityFile = "~/.ssh/aur";
       };
       "yummyimages" = {
-        hostname = "46.174.53.195";
+        hostname = "109.73.194.87";
         user = "root";
         identityFile = "~/.ssh/id_rsa";
       };
-      "yummyproxy1" = {
-        hostname = "46.174.48.54";
-        user = "root";
-        identityFile = "~/.ssh/id_rsa";
-      };
-      "yummyproxy2" = {
-        hostname = "46.174.53.158";
-        user = "root";
-        identityFile = "~/.ssh/id_rsa";
-      };
-      "yummyproxy3" = {
-        hostname = "46.174.53.62";
-        user = "root";
-        identityFile = "~/.ssh/id_rsa";
-      };
-      "yummyvpn" = {
-        hostname = "94.131.113.12";
-        user = "root";
-        identityFile = "~/.ssh/id_rsa";
-      };
+
       "twebmysql" = {
         hostname = "147.45.148.191";
         user = "root";
