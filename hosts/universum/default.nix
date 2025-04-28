@@ -64,6 +64,7 @@
     inputs.stellar.packages.${pkgs.system}.default
 
     pkgs.zstd
+    pkgs.watchman
 
   ];
 
@@ -77,6 +78,8 @@
     ];
     brews = [
       "stellar-cli"
+      "hfsutils"
+      "telnet"
     ];
   };
 
