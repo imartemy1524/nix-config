@@ -34,7 +34,6 @@
     pkgs.vlc-bin
     pkgs.vscode
 
-    pkgs.zoom-us
     pkgs.qbittorrent
     pkgs.brewCasks.maccy
     pkgs.brewCasks.obs
@@ -80,6 +79,7 @@
       "stellar-cli"
       "hfsutils"
       "telnet"
+      "cmake"
     ];
   };
 

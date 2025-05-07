@@ -50,7 +50,9 @@
     };
     lsd = {
       enable = true;
-      enableAliases = true;
+      # enableAliases = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
     };
     mpv.enable = true;
     micro.enable = true;
